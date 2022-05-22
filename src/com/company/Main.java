@@ -12,7 +12,7 @@ package com.company;
             String text = "";
 
             try {
-                System.out.println("Введите арифметическое выражение");
+                System.out.println("Р’РІРµРґРёС‚Рµ Р°СЂРёС„РјРµС‚РёС‡РµСЃРєРѕРµ РІС‹СЂР°Р¶РµРЅРёРµ");
                 String num = scanner.nextLine();
                 text = num.replaceAll("\\s","");
                 String[] blocks = text.split("[\\Q^*/+-%\\E]");
@@ -33,12 +33,12 @@ package com.company;
                 if (isNumber(Integer.parseInt(blocks[0])) && isNumber(Integer.parseInt(blocks[1]))) {
                     result = calculator.calculate(Integer.parseInt(blocks[0]), Integer.parseInt (blocks[1]), sign);
                 } else {
-                    System.out.println("Введенные числа должны входить в диапазон от 1 до 10");
+                    System.out.println("Р’РІРµРґРµРЅРЅС‹Рµ С‡РёСЃР»Р° РґРѕР»Р¶РЅС‹ РІС…РѕРґРёС‚СЊ РІ РґРёР°РїР°Р·РѕРЅ РѕС‚ 1 РґРѕ 10");
                     throw new IllegalArgumentException();
                 }
 
                 if(roman == 1) {
-                    System.out.println("Калькулятор работает только с арабскими и римскими цифрами");
+                    System.out.println("РљР°Р»СЊРєСѓР»СЏС‚РѕСЂ СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ СЃ Р°СЂР°Р±СЃРєРёРјРё Рё СЂРёРјСЃРєРёРјРё С†РёС„СЂР°РјРё");
                     throw new IllegalArgumentException();
                 }
 
@@ -48,7 +48,7 @@ package com.company;
                     System.out.println(result);
                 }
             } catch (RuntimeException e) {
-                System.out.println("Неверный формат данных");
+                System.out.println("РќРµРІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚ РґР°РЅРЅС‹С…");
             }
         }
 
@@ -62,7 +62,7 @@ package com.company;
             } else if (text.contains("/")) {
                 return  '/';
             } else {
-                System.out.println("Арифметический знак введен неверно. Допустимые знаки +,-,*,/");
+                System.out.println("РђСЂРёС„РјРµС‚РёС‡РµСЃРєРёР№ Р·РЅР°Рє РІРІРµРґРµРЅ РЅРµРІРµСЂРЅРѕ. Р”РѕРїСѓСЃС‚РёРјС‹Рµ Р·РЅР°РєРё +,-,*,/");
                 throw new IllegalArgumentException();
             }
         }

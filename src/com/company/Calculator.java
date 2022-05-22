@@ -9,7 +9,7 @@ public class Calculator {
                 case '-': result = num - num1; break;
                 case '*': result = num * num1; break;
                 case '/': result = num / num1; break;
-                default:throw  new IllegalArgumentException("Не верный знак");
+                default:throw  new IllegalArgumentException("РќРµ РІРµСЂРЅС‹Р№ Р·РЅР°Рє");
         }
         return result;
 }
